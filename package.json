@@ -1,0 +1,12 @@
+{
+  "name": "artlist-mp4-scraper",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "better-sqlite3": "^12.8.0",
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^24.40.0",
+    "puppeteer-core": "^23.0.0",
+    "readline-sync": "^1.4.10"
+  }
+}
