@@ -7,7 +7,7 @@ import { promisify } from 'util';
 const execAsync = promisify(exec);
 
 const TARGET_URL = 'https://artlist.io/stock-footage/search?terms=anime';
-const OUTPUT_DIR = 'C:\\Users\\pater\\Downloads\\TestVideo';
+const OUTPUT_DIR = process.env.SCRAPER_OUTPUT_DIR || './Output';
 
 // Crea cartella se non esiste
 if (!fs.existsSync(OUTPUT_DIR)) {

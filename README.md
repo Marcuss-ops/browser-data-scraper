@@ -260,29 +260,29 @@ categories ──┬── search_terms ──┬── video_links
 - **Video format**: HLS (.m3u8) → converted to MP4 via ffmpeg
 
 ### Pixabay API
-- **API Key**: `55327477-246ca9e690f402753b4d8491b`
+- **API Key**: Configure in `.env` or `src/api_config.js`
 - **Rate Limit**: 100 requests/minute
 - **Documentation**: https://pixabay.com/api/docs/
 
 ### Pexels API
-- **API Key**: `bpfaewdM9Tui4q0shyblk5sQzI2PdVYXErbBkxlHNTgh1F0OIiqcYTV0`
+- **API Key**: Configure in `.env` or `src/api_config.js`
 - **Rate Limit**: 200 requests/hour
 - **Documentation**: https://www.pexels.com/api/
 
 ### Changing API Keys
 
-Edit `src/api_config.js`:
+Edit `.env` (recommended) or `src/api_config.js`:
 
 ```javascript
-export const PIXABAY_API_KEY = 'your-key-here';
-export const PEXELS_API_KEY = 'your-key-here';
+export const PIXABAY_API_KEY = process.env.PIXABAY_API_KEY || 'your-key-here';
+export const PEXELS_API_KEY = process.env.PEXELS_API_KEY || 'your-key-here';
 ```
 
 ## ⚙️ Configuration
 
 ### Download Output Directory
 
-Videos are downloaded to `C:\Users\pater\Pyt\browserDataTest\Output` by default. Modify `OUTPUT_DIR` in `scripts/map_artlist.js` to change this.
+Videos are downloaded to `./Output` by default. Modify `SCRAPER_OUTPUT_DIR` in your environment or `OUTPUT_DIR` in `scripts/map_artlist.js` to change this.
 
 ### Rate Limiting
 
