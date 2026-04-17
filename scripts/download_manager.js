@@ -6,7 +6,7 @@ import { videoLinks, categories, closeDB } from '../src/db.js';
 
 const execAsync = promisify(exec);
 
-const DEFAULT_OUTPUT_DIR = 'C:\\Users\\pater\\Downloads\\ArtlistVideos';
+const DEFAULT_OUTPUT_DIR = process.env.SCRAPER_OUTPUT_DIR || './Output';
 
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) {

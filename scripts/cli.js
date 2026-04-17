@@ -1,5 +1,5 @@
 import { categories, searchTerms, videoLinks, duplicates, closeDB } from '../src/db.js';
-import { downloadAll, DEFAULT_OUTPUT_DIR } from '../download_manager.js';
+import { downloadAll, DEFAULT_OUTPUT_DIR } from './download_manager.js';
 import { scrapeAllCategories as scrapeAPIs } from './scrape_apis.js';
 import readlineSync from 'readline-sync';
 

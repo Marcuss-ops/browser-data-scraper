@@ -7,7 +7,7 @@ import { promisify } from 'util';
 
 const execAsync = promisify(exec);
 
-const OUTPUT_DIR = 'C:\\Users\\pater\\Pyt\\browserDataTest\\Output';
+const OUTPUT_DIR = process.env.SCRAPER_OUTPUT_DIR || './Output';
 
 // Ensure output directory exists
 if (!fs.existsSync(OUTPUT_DIR)) {
